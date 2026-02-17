@@ -1,0 +1,355 @@
+/* Main Container */
+.Todo {
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* App Title */
+.Todo > h1 {
+    text-align: center;
+    color: gray;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Add Todo Section */
+.add-todo-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.todo-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.add-btn {
+    padding: 15px 30px;
+    background:cornflowerblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.add-btn:active {
+    transform: translateY(0);
+}
+
+/* Todo List Section */
+.todo-list-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+}
+
+.todo-list-section h2 {
+    color:gray;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    font-size: 1.1rem;
+    padding: 40px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Todo Item */
+.todo-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 4px solid #667eea;
+}
+
+.todo-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Todo Header */
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.todo-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.edit-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    background: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #da190b;
+    transform: scale(1.05);
+}
+
+.save-btn {
+    background: #2196F3;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #0b7dda;
+    transform: scale(1.05);
+}
+
+.cancel-btn {
+    background: #9E9E9E;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #757575;
+    transform: scale(1.05);
+}
+
+/* Edit Todo Input */
+.edit-todo-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #2196F3;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    background: white;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
+}
+
+.edit-todo-input:focus {
+    outline: none;
+    border-color: #0b7dda;
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+/* Tasks Section */
+.tasks-section {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.add-task {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.task-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.task-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.add-task-btn {
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-task-btn:hover {
+    background: #5568d3;
+}
+
+/* Task List */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #f0f0f0;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.task-item:hover {
+    background: #e8e8e8;
+    transform: translateX(3px);
+}
+
+.task-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #667eea;
+}
+
+.task-item span {
+    flex: 1;
+    color: #333;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.task-item input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: #999;
+    opacity: 0.6;
+}
+
+.delete-task-btn {
+    padding: 6px 12px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.delete-task-btn:hover {
+    background: orangered;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Todo {
+        padding: 15px;
+    }
+
+    .Todo > h1 {
+        font-size: 2.2rem;
+    }
+
+    .todo-list-section {
+        padding: 20px;
+    }
+
+    .todo-list-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .add-todo-section,
+    .add-task {
+        flex-direction: column;
+    }
+
+    .add-btn,
+    .add-task-btn {
+        width: 100%;
+    }
+
+    .todo-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .todo-actions {
+        width: 100%;
+    }
+
+    .edit-btn,
+    .delete-btn,
+    .save-btn,
+    .cancel-btn {
+        flex: 1;
+    }
+}
+
+
+
